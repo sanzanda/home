@@ -1,0 +1,157 @@
+---
+import Box from "./Box.astro";
+import Top from "../img/codoc.jpg"
+import Books from "../img/230527.jpg"
+import Chobu from "../img/codocsub.jpg"
+---
+
+<header>
+  <div class="main">
+    <div class="card">
+      <div class="col3">
+
+          <Box>
+            <div slot = "text" class="text">
+            <h2 slot="info">おしらせ</h2>
+            <dt slot="idt">2024.05.15</dt>
+            <dd slot="idd"><a href="https://nanimonai.sanzanda.com/archives/1625">文学フリマ東京38に出店します</a></dd>
+          </div>
+          
+          </Box>
+
+        <Box>
+          <img slot="timg" src={Top.src}>
+        </Box>
+
+          <Box>
+            <div slot = "text" class="text">
+            <h2 slot="update">更新情報</h2>
+            <dt slot="udt3">テキスト　2024.05.15</dt>
+            <dd slot="udd3"><a href="https://nanimonai.sanzanda.com/">ブログ更新</a></dd>
+            <dt slot="udt1">創作　2024.05.15</dt>
+            <dd slot="udd1"><a href="https://nitonzepo.sometime.jp/">オリキャラらくがき追加</a></dd>
+              <dt slot="udt2">版権　2024.05.15</dt>
+            <dd slot="udd2"><a href="https://kozeniand.folder.jp/">ゲームらくがき追加</a></dd>
+
+            </div>
+          </Box>
+      </div>
+      <h1 class="title">SANZANDA.com</h1>
+      <div class="col3">
+       <Box>
+        <img slot="books" src={Books.src}>
+       </Box>
+       <Box>
+        <div slot = "text" class="text">
+        <h2 slot="here" >ここは</h2>
+        <p slot="disc" >小渕リツ子のポータルサイトです。現在絶賛工事中。更新情報から各サイトに飛べます。</p>
+        </div>
+       </Box>
+       <Box>
+        <img slot="chobu" src={Chobu.src}>
+       </Box>
+      </ul>
+    </div>
+  </div>
+</header>
+<style>
+
+  .col3 {
+    display: flex;
+    align-items: stretch;
+    gap: 16px;
+    /* background-color: aquamarine; */
+    max-height: 800px;
+  }
+  img {
+    object-fit: cover;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  display: block;
+ }
+  .main {
+    max-width: 80vw;
+    margin: 0 auto;
+    background-color: rgb(248, 248, 248,.9);
+  }
+  
+  .card {
+    /* background-color: azure; */
+    padding: 16px 24px;
+  }
+.text {
+  box-sizing: border-box;
+  padding: 12px 24px;
+}
+
+  header {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    /* background-color: blanchedalmond; */
+  }
+
+  .title{
+    font-size: 48px;
+  }
+
+  h2{
+    font-size: 24px;
+    margin: 0 0 12px;
+  }
+
+p {
+  font-size: 16px;
+}
+
+  dt {
+    margin-top: 12px;
+    font-size: 12px;
+  }
+
+  dd {
+    font-size: 16px;
+    margin: auto 0 auto;
+  }
+
+  a {
+    color: black;
+  }
+
+  @media (max-width :834px) {
+    .title{
+    font-size: 24px;
+  }
+
+  h2{
+    font-size: 16px;
+  }
+
+p {
+  font-size: 12px;
+}
+
+  dt {
+    font-size: 10px;
+  }
+
+  dd {
+    font-size: 12px;
+  }
+    
+  .text {
+  padding: 0 8px;
+}
+
+  }
+
+  @media (max-width :560px){
+    .col3{
+      display: flex;
+      flex-direction: column
+    }
+    
+  }
+
+</style>

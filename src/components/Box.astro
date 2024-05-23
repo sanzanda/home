@@ -1,0 +1,60 @@
+
+<div class="boxTop">
+  <div class="boxContent">
+  <slot name="books" />
+  <slot name="bimg" />
+  <slot name="here" />
+  <slot name="chobu" />
+  <slot name="text">
+  <slot name="info" />
+  <slot name="timg" />
+  <slot name="update" />
+  <slot name="udt1" />
+  <slot name="udd1" />
+  <slot name="udt2" />
+  <slot name="udd2" />
+  <slot name="udt3" />
+  <slot name="udd3" />
+  <slot name="idt" />
+  <slot name="idd" />
+  <slot name="disc" />
+</slot>
+</div>
+</div>
+<style>
+  .boxTop {
+    /* display: flex; */
+    box-sizing: border-box;
+	border: 0.2vw dashed black;
+	background: #f9f9f9;
+  width: 100%;
+  aspect-ratio: 4 / 3 ;
+ box-shadow: 0px 0.3vw 4px gray;
+ justify-content: center;
+}
+
+
+
+.boxContent {
+  box-sizing: border-box;
+  /* background-color:blanchedalmond; */
+  height:100%;
+  width: 100%;
+ overflow-y: auto;
+ padding: 12px;
+}
+
+.boxContent::-webkit-scrollbar{
+  width: 0.8vw;
+}
+
+.boxContent::-webkit-scrollbar-thumb{
+  background: rgb(199, 199, 199);
+}
+.boxContent::-webkit-scrollbar-button{}
+
+.boxContent::-webkit-scrollbar-track{
+  background: none;
+}
+
+</style>

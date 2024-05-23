@@ -1,0 +1,30 @@
+---
+interface Props {
+	title: string;
+	href: string;
+	date: string;
+	update: string;
+}
+
+const { href, title, date, update} = Astro.props;
+---
+<div class="info">
+<h2>{title}</h2>
+<dl>
+  <dt>{date}</dt>
+  <dd><a href={href}>{update}</a></dd>
+</dl>
+</div>
+
+<style>
+a{
+	text-decoration: none;
+	color: black;
+}
+
+h2{
+	font-size: 24px;
+	color: black;
+}
+
+</style>
